@@ -233,12 +233,30 @@
         // https://stackoverflow.com/questions/2432003/combine-hover-and-click-functions-jquery
 
         $('.card-btn').on('click mouseover', function (event) {
+            event.preventDefault();
             console.log('event', event);
-            console.log('event.type', event.type);
+            console.log('event.type', event.type); // 抓該事件的名稱 e.g. click / mouseover
+            console.log('$(event)', $(event)); // 直接抓觸發事件的元素，類似 this，但比較明確
+
+            let imgTag = $(event);
+            console.log('imgTag', imgTag);
+            // children() / parent() 這種方法會寫死 html 不建議，可能會有更好的方法
+            let aTag = imgTag.parent();
+            console.log('aTag', aTag);
+
             if (event.type == 'click') {
-
+                aTag.siblings().slideToggle().css('display', 'flex');
+                if (imgTag.attr('src') === '../img/育愷(上色)-01.png') {
+                    imgTag.attr('src', '../img/育愷(黑白)-01.png')
+                } else {
+                    imgTag.attr('src', '../img/育愷(上色)-01.png')
+                }
             } else if (event.type == 'mouseover') {
-
+                if (imgTag.attr('src') === '../img/育愷(上色)-01.png') {
+                    imgTag.attr('src', '../img/育愷(黑白)-01.png')
+                } else {
+                    imgTag.attr('src', '../img/育愷(上色)-01.png')
+                }
             }
         });
 
