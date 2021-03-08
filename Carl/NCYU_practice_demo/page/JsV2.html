@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <style>
+        .banner {
+            margin: 0 auto;
+            padding: 0px;
+            width: 100%;
+            height: 100vh;
+            background-image: url(../img/banner.jpeg);
+            background-position: 45% 75%;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            background-color: rgba(252, 230, 201, 0.7);
+        }
+
+        .card-btn {
+            width: 50%;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        h1 {
+            color: #ffff;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .card-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card-text {
+            width: 50%;
+            margin-top: 15px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-text h2 {
+            font-size: 28px;
+            font-weight: bolder;
+        }
+
+        .card-text h2>span {
+            font-weight: normal;
+            font-size: 24px;
+        }
+
+        .card-text p {
+            line-height: 1.5;
+            text-align: justify;
+            margin-top: 15px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1%;
+            width: 45%;
+        }
+
+        .article {
+            margin-top: 100px;
+        }
+
+        .article_img {
+            border-radius: 5% 5% 5% 5%;
+        }
+
+        .article-card {
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            padding: 1%;
+            width: 70%;
+        }
+
+        .article-card>img {
+            width: 47%;
+        }
+
+        .card-text>h3 {
+            font-weight: bolder;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .f-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .card-text>h4 {
+            font-size: 24px;
+        }
+
+        @media (max-width: 1000px) {
+            .card {
+                width: 75%;
+            }
+
+            .card-list {
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .card-text {
+                width: 75%;
+                margin-top: 15px;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .article-card {
+                flex-direction: column;
+            }
+
+            .article-card>img {
+                width: 80%;
+            }
+        }
+
+        .show {
+            display: flex;
+        }
+
+        @media (max-width: 768px) {
+            .card-text>h3 {
+                font-size: 24px;
+            }
+
+            .card-text>h4 {
+                font-size: 20px;
+            }
+
+            .show {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- banner -->
+    <div class="banner">
+        <div class="header">
+            <h1>高科技行銷第四組</h1>
+        </div>
+    </div>
+    <!-- 人物介紹頁 -->
+    <ul class="container card-list">
+        <li class="card">
+            <a href="#" class="card-btn" id="card-btn1"><img src="../img/育愷(黑白)-01.png"></a>
+            <div class="card-text">
+                <h2>育愷 <span>外語系</span></h2>
+                <p>大家好，我是育愷，幹話型玩家，然後會一點網頁設計，再加上一些行銷技巧及分析天，有贏過一些比賽，不過這些只是皮毛，僅此而已，外語什麼的一概不會，可謂中庸之材。才疏學淺，稍微不要臉，路上有一塊錢什麼的也會去撿。
+                </p>
+            </div>
+        </li>
+        <li class="card">
+            <a href="#" class="card-btn" id="card-btn2"><img src="../img/品萱(黑白)-01.png"></a>
+            <div class="card-text">
+                <h2>品萱 <span>數位系</span></h2>
+                <p>唷 Guys，我是品萱本人啦，如果家裡有需要清潔打掃，歡迎撥打0962025660專線，將會有專人為您到府服務！（如果可以希望提供免費下午茶點心
+                    )，除了打掃之外，還會美術設計，電繪，喜歡講很冷的笑話，如果場子太熱的話，也可以找我啦，全球暖化靠我解決了 !
+                </p>
+            </div>
+        </li>
+        <li class="card">
+            <a href="#" class="card-btn" id="card-btn3"><img src="../img/嘉珣(黑白)-01.png"></a>
+            <div class="card-text">
+                <h2>嘉珣 <span>行銷系</span></h2>
+                <p>想法很多，可以提供各式的點子或行銷方案，也有滿多上台報告或相關的經驗，還有額外的應該是⋯⋯會唱歌算特色嗎😂
+                </p>
+            </div>
+        </li>
+        <li class="card">
+            <a href="#" class="card-btn" id="card-btn4"><img src="../img/阿鵝(黑白)-01.png"></a>
+            <div class="card-text">
+                <h2>郁敏 <span>升資系</span></h2>
+                <p>小名阿鵝，南部客家人。想要最爆炸的行銷效果，卻只有最微薄的預算嗎？讓有客家資歷超過20年的阿鵝，教你如何花小錢、賺大錢！ 能力：做簡報、AI、辦活動
+                </p>
+            </div>
+        </li>
+    </ul>
+    <ul class="article container card-list">
+        <li class="article-card">
+            <img src="../img/pexels-photo-355948.jpeg" class="article_img">
+            <div class="card-text show">
+                <h3>All in ONE 全方位！</h3>
+            </div>
+        </li>
+        <li class="article-card  f-reverse">
+            <img src="../img/pexels-photo-2.jpeg" class="article_img">
+            <div class="card-text show">
+                <h3>一組抵六組</h3>
+                <h3>你要的都在這一組</h3>
+                <h4>組員全來自不同科系，多功能的團隊</h4>
+                <h4 style="margin-top: 20px;">你要的全拿走 !</h4>
+            </div>
+        </li>
+
+    </ul>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // https://stackoverflow.com/questions/2432003/combine-hover-and-click-functions-jquery
+
+        $('.card-btn').on('click mouseover', function (event) {
+            console.log('event', event);
+            console.log('event.type', event.type);
+            if (event.type == 'click') {
+
+            } else if (event.type == 'mouseover') {
+
+            }
+        });
+
+        // $('#card-btn1').click(function (event) {
+        //     event.preventDefault();
+        //     $(this).siblings().slideToggle().css('display', 'flex');
+        //     console.log(event);
+        //     let el = $(this).children().attr('src');
+        //     console.log(el);
+        //     if (el == '../img/育愷(上色)-01.png') {
+        //         $('#card-btn1').children().attr('src', '../img/育愷(黑白)-01.png')
+        //     } else {
+        //         $('#card-btn1').children().attr('src', '../img/育愷(上色)-01.png')
+        //     }
+        // });
+        // $('#card-btn2').click(function (event) {
+        //     event.preventDefault();
+        //     $(this).siblings().slideToggle().css('display', 'flex');
+        //     console.log(event);
+        //     let el = $(this).children().attr('src');
+        //     console.log(el);
+        //     if (el == '../img/品萱(上色)-01.png') {
+        //         $('#card-btn2').children().attr('src', '../img/品萱(黑白)-01.png')
+        //     } else {
+        //         $('#card-btn2').children().attr('src', '../img/品萱(上色)-01.png')
+        //     }
+        // });
+        // $('#card-btn3').click(function (event) {
+        //     event.preventDefault();
+        //     $(this).siblings().slideToggle().css('display', 'flex');
+        //     console.log(event);
+        //     let el = $(this).children().attr('src');
+        //     console.log(el);
+        //     if (el == '../img/嘉珣(上色)-01.png') {
+        //         $('#card-btn3').children().attr('src', '../img/嘉珣(黑白)-01.png')
+        //     } else {
+        //         $('#card-btn3').children().attr('src', '../img/嘉珣(上色)-01.png')
+        //     }
+        // });
+        // $('#card-btn4').click(function (event) {
+        //     event.preventDefault();
+        //     $(this).siblings().slideToggle().css('display', 'flex');
+        //     console.log(event);
+        //     let el = $(this).children().attr('src');
+        //     console.log(el);
+        //     if (el == '../img/阿鵝(上色)-01.png') {
+        //         $('#card-btn4').children().attr('src', '../img/阿鵝(黑白)-01.png')
+        //     } else {
+        //         $('#card-btn4').children().attr('src', '../img/阿鵝(上色)-01.png')
+        //     }
+        // });
+        // // mouseover()
+        // $('#card-btn1').hover(function (event) {
+        //     event.preventDefault();
+        //     console.log(event);
+        //     let el = $(this).children().attr('src');
+        //     console.log(el);
+        //     if (el == '../img/育愷(上色)-01.png') {
+        //         $('#card-btn1').children().attr('src', '../img/育愷(黑白)-01.png')
+        //     } else {
+        //         $('#card-btn1').children().attr('src', '../img/育愷(上色)-01.png')
+        //     }
+        // });
+        // $('#card-btn2').hover(function (event) {
+        //     event.preventDefault();
+        //     console.log(event);
+        //     let el = $(this).children().attr('src');
+        //     console.log(el);
+        //     if (el == '../img/品萱(上色)-01.png') {
+        //         $('#card-btn2').children().attr('src', '../img/品萱(黑白)-01.png')
+        //     } else {
+        //         $('#card-btn2').children().attr('src', '../img/品萱(上色)-01.png')
+        //     }
+        // });
+        // $('#card-btn3').hover(function (event) {
+        //     event.preventDefault();
+        //     console.log(event);
+        //     let el = $(this).children().attr('src');
+        //     console.log(el);
+        //     if (el == '../img/嘉珣(上色)-01.png') {
+        //         $('#card-btn3').children().attr('src', '../img/嘉珣(黑白)-01.png')
+        //     } else {
+        //         $('#card-btn3').children().attr('src', '../img/嘉珣(上色)-01.png')
+        //     }
+        // });
+        // $('#card-btn4').hover(function (event) {
+        //     event.preventDefault();
+        //     console.log(event);
+        //     let el = $(this).children().attr('src');
+        //     console.log(el);
+        //     if (el == '../img/阿鵝(上色)-01.png') {
+        //         $('#card-btn4').children().attr('src', '../img/阿鵝(黑白)-01.png')
+        //     } else {
+        //         $('#card-btn4').children().attr('src', '../img/阿鵝(上色)-01.png')
+        //     }
+        // });
+
+    });
+</script>
+
+</html>
