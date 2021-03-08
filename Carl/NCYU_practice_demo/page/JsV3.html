@@ -78,7 +78,7 @@
 
         // https://stackoverflow.com/questions/2432003/combine-hover-and-click-functions-jquery
 
-        $('.card-btn').on('click mouseover', function (event) {
+        $('.card-btn').on('click mouseenter mouseleave', function (event) {
             event.preventDefault();
             // console.log('event', event);
             // console.log('event.type', event.type); // 抓該事件的名稱 e.g. click / mouseover
