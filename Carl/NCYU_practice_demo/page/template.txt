@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-    <link rel="stylesheet" href="./shared.css">
-</head>
-
-<body>
-    <!-- banner -->
+<!-- banner -->
     <div class="banner">
         <div class="header">
             <h1>高科技行銷第四組</h1>
@@ -71,41 +58,3 @@
         </li>
 
     </ul>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-
-        // https://stackoverflow.com/questions/2432003/combine-hover-and-click-functions-jquery
-
-        $('.card-btn').on('click mouseover', function (event) {
-            event.preventDefault();
-            // console.log('event', event);
-            // console.log('event.type', event.type); // 抓該事件的名稱 e.g. click / mouseover
-            // console.log('$(event)', $(event.currentTarget)); // 直接抓觸發事件的元素，類似 this，但比較明確
-
-            let ATag = $(event.currentTarget);
-            // console.log('ATag', ATag);
-            // children() / parent() 這種方法會寫死 html 不建議，可能會有更好的方法
-            let ImgTag = ATag.children();
-            // console.log('ImgTag', ImgTag);
-
-            let ImgSrc = ImgTag.attr('src');
-            // console.log('ImgSrc', ImgSrc);
-
-            if (event.type == 'click')
-                ATag.siblings().slideToggle().css('display', 'flex');
-
-            // 其實也不算太好的寫法，很吃擋名，除非能控制檔名
-            if (ImgSrc.indexOf('黑白') >= 0) {
-                ImgSrc = ImgSrc.replace('黑白', '上色');
-            } else {
-                ImgSrc = ImgSrc.replace('上色', '黑白');
-            }
-            ImgTag.attr('src', ImgSrc)
-        });
-
-    });
-</script>
-
-</html>

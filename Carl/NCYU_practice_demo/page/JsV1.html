@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <scritp src="./shared.js"></scritp>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="./shared.css">
+</head>
+
+<body>
+    <div id="template"></div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#card-btn1').click(function (event) {
+            event.preventDefault();
+            $(this).siblings().slideToggle().css('display', 'flex');
+            console.log(event);
+            let el = $(this).children().attr('src');
+            console.log(el);
+            if (el == '../img/育愷(上色)-01.png') {
+                $('#card-btn1').children().attr('src', '../img/育愷(黑白)-01.png')
+            } else {
+                $('#card-btn1').children().attr('src', '../img/育愷(上色)-01.png')
+            }
+        });
+        $('#card-btn2').click(function (event) {
+            event.preventDefault();
+            $(this).siblings().slideToggle().css('display', 'flex');
+            console.log(event);
+            let el = $(this).children().attr('src');
+            console.log(el);
+            if (el == '../img/品萱(上色)-01.png') {
+                $('#card-btn2').children().attr('src', '../img/品萱(黑白)-01.png')
+            } else {
+                $('#card-btn2').children().attr('src', '../img/品萱(上色)-01.png')
+            }
+        });
+        $('#card-btn3').click(function (event) {
+            event.preventDefault();
+            $(this).siblings().slideToggle().css('display', 'flex');
+            console.log(event);
+            let el = $(this).children().attr('src');
+            console.log(el);
+            if (el == '../img/嘉珣(上色)-01.png') {
+                $('#card-btn3').children().attr('src', '../img/嘉珣(黑白)-01.png')
+            } else {
+                $('#card-btn3').children().attr('src', '../img/嘉珣(上色)-01.png')
+            }
+        });
+        $('#card-btn4').click(function (event) {
+            event.preventDefault();
+            $(this).siblings().slideToggle().css('display', 'flex');
+            console.log(event);
+            let el = $(this).children().attr('src');
+            console.log(el);
+            if (el == '../img/阿鵝(上色)-01.png') {
+                $('#card-btn4').children().attr('src', '../img/阿鵝(黑白)-01.png')
+            } else {
+                $('#card-btn4').children().attr('src', '../img/阿鵝(上色)-01.png')
+            }
+        });
+        // mouseover()
+        $('#card-btn1').hover(function (event) {
+            event.preventDefault();
+            console.log(event);
+            let el = $(this).children().attr('src');
+            console.log(el);
+            if (el == '../img/育愷(上色)-01.png') {
+                $('#card-btn1').children().attr('src', '../img/育愷(黑白)-01.png')
+            } else {
+                $('#card-btn1').children().attr('src', '../img/育愷(上色)-01.png')
+            }
+        });
+        $('#card-btn2').hover(function (event) {
+            event.preventDefault();
+            console.log(event);
+            let el = $(this).children().attr('src');
+            console.log(el);
+            if (el == '../img/品萱(上色)-01.png') {
+                $('#card-btn2').children().attr('src', '../img/品萱(黑白)-01.png')
+            } else {
+                $('#card-btn2').children().attr('src', '../img/品萱(上色)-01.png')
+            }
+        });
+        $('#card-btn3').hover(function (event) {
+            event.preventDefault();
+            console.log(event);
+            let el = $(this).children().attr('src');
+            console.log(el);
+            if (el == '../img/嘉珣(上色)-01.png') {
+                $('#card-btn3').children().attr('src', '../img/嘉珣(黑白)-01.png')
+            } else {
+                $('#card-btn3').children().attr('src', '../img/嘉珣(上色)-01.png')
+            }
+        });
+        $('#card-btn4').hover(function (event) {
+            event.preventDefault();
+            console.log(event);
+            let el = $(this).children().attr('src');
+            console.log(el);
+            if (el == '../img/阿鵝(上色)-01.png') {
+                $('#card-btn4').children().attr('src', '../img/阿鵝(黑白)-01.png')
+            } else {
+                $('#card-btn4').children().attr('src', '../img/阿鵝(上色)-01.png')
+            }
+        });
+
+    });
+</script>
+
+</html>

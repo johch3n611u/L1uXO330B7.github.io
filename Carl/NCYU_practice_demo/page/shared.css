@@ -1,0 +1,147 @@
+.banner {
+    margin: 0 auto;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/banner.jpeg);
+    background-position: 45% 75%;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header {
+    text-align: center;
+    background-color: rgba(252, 230, 201, 0.7);
+}
+
+.card-btn {
+    width: 50%;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    color: #ffff;
+    font-weight: bold;
+}
+
+p {
+    font-size: 20px;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-text {
+    width: 50%;
+    margin-top: 15px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-text h2 {
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.card-text h2>span {
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.card-text p {
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+    width: 45%;
+}
+
+.article {
+    margin-top: 100px;
+}
+
+.article_img {
+    border-radius: 5% 5% 5% 5%;
+}
+
+.article-card {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 1%;
+    width: 70%;
+}
+
+.article-card>img {
+    width: 47%;
+}
+
+.card-text>h3 {
+    font-weight: bolder;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.f-reverse {
+    flex-direction: row-reverse;
+}
+
+.card-text>h4 {
+    font-size: 24px;
+}
+
+@media (max-width: 1000px) {
+    .card {
+        width: 75%;
+    }
+    .card-list {
+        align-items: center;
+        flex-direction: column;
+    }
+    .card-text {
+        width: 75%;
+        margin-top: 15px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .article-card {
+        flex-direction: column;
+    }
+    .article-card>img {
+        width: 80%;
+    }
+}
+
+.show {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .card-text>h3 {
+        font-size: 24px;
+    }
+    .card-text>h4 {
+        font-size: 20px;
+    }
+    .show {
+        display: flex;
+    }
+}
