@@ -236,13 +236,13 @@
             event.preventDefault();
             console.log('event', event);
             console.log('event.type', event.type); // 抓該事件的名稱 e.g. click / mouseover
-            console.log('$(event)', $(event)); // 直接抓觸發事件的元素，類似 this，但比較明確
+            console.log('$(event)', $(event.currentTarget)); // 直接抓觸發事件的元素，類似 this，但比較明確
 
-            let imgTag = $(event);
-            console.log('imgTag', imgTag);
-            // children() / parent() 這種方法會寫死 html 不建議，可能會有更好的方法
-            let aTag = imgTag.parent();
+            let aTag = $(event.currentTarget);
             console.log('aTag', aTag);
+            // children() / parent() 這種方法會寫死 html 不建議，可能會有更好的方法
+            let imgTag = aTag.children();
+            console.log('imgTag', imgTag);
 
             if (event.type == 'click') {
                 aTag.siblings().slideToggle().css('display', 'flex');
@@ -259,6 +259,10 @@
                 }
             }
         });
+
+        function ImgSwitch() {
+
+        }
 
         // $('#card-btn1').click(function (event) {
         //     event.preventDefault();
