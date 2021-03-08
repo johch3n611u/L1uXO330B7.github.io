@@ -102,10 +102,19 @@
             } else {
                 ImgSrc = ImgSrc.replace('上色', '黑白');
             }
-            ImgTag.attr('src', ImgSrc)
+            ImgTag.attr('src', ImgSrc);
+
+            ImgTag.attr('style', 'background-color:"' + getRandomColor() + '";');
         });
 
     });
+
+    // 隨機取 rgb 字串
+    function getRandomColor() {
+        var rgb = 'rgb(' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',0.4)';
+        // console.log(rgb);
+        return rgb;
+    }
 </script>
 
 </html>
